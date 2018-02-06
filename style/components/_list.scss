@@ -1,0 +1,35 @@
+/* ========================================================================
+ Component: List Menu
+ ========================================================================== */
+
+.nr.list {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style-type: none;
+    padding-top: $padding-small;
+    padding-bottom: $padding-small;
+
+    border-bottom: 1px solid $color-base-lighter;
+    &:last-child {
+      border-bottom: none;
+    }
+    a {
+      display: inline-block;
+      margin-bottom: 5px;
+
+      color: $color-link;
+      font-size: $global-font-size;
+      text-decoration: none;
+
+      -webkit-transition: all 0.2s;
+         -moz-transition: all 0.2s;
+           -o-transition: all 0.2s;
+              transition: all 0.2s;
+      &:visited {
+        color: $color-visited;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,32 @@
+
+/* ========================================================================
+ Component: Pagination
+ ========================================================================== */
+
+.nr.pagination,
+.nr.pagination li {
+	display:inline-block;
+	list-style: outside none none;
+	padding: 0;
+	margin: 0;
+	border:0;
+}
+
+.nr.pagination li > a {
+	display: inline-block;
+	background-color: $color-content;
+	font-size: $global-font-size-small;
+	border: 1px solid $color-base-lighter;
+	color: $color-base-darker;
+	padding: 10px;
+	min-width:25px;
+	text-decoration: none;
+  text-align: center;
+  border-radius: $border-rounded-border-radius;
+}
+
+.nr.pagination li.active > a {
+  color: $color-content;
+  background-color: $color-primary;
+  border-color: $color-primary;
+}

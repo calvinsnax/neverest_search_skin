@@ -1,0 +1,38 @@
+<include target="header.html" />
+<include target="_header.html" />
+
+<h3><i class="ion-android-folder" style="font-size: 24px;" aria-hidden="true"></i> {$lang->file} <span>({number_format($output->total_count)})</span></h3>
+
+<!--@if(!count($output->data))-->
+<p class="nr text-small text-muted margin-top-small margin-bottom-remove">{$lang->msg_no_result}</p>
+
+<!--@else-->
+
+<ul class="nr list">
+<!--@foreach($output->data as $no => $file)-->
+  <li>
+    <a href="{$file->url}" target="_blank">{$file->filename}</a> <span class="nr text-small text-muted">({FileHandler::filesize($file->file_size)})</span>
+    <p class="nr text-xsmall text-muted">{$file->nick_name} · {$file->regdate} · {number_format($file->download_count)}</p>
+  </li>
+<!--@end-->
+</ul>
+
+<!--@if($where == 'file' &&  $output->page_navigation)-->
+<div class="nr flex flex-center">
+  <div class="nr pagination">
+    <li><a href="{getUrl('page','')}">{$lang->first_page}</a></li>
+    <!--@while($page_no = $output->page_navigation->getNextPage())-->
+      <!--@if($page == $page_no)-->
+      <li><a href="#">{$page_no}</a></li>
+      <!--@else-->
+      <li><a href="{getUrl('page',$page_no)}">{$page_no}</a></li>
+      <!--@end-->
+    <!--@end-->
+    <li><a href="{getUrl('page',$output->page_navigation->last_page)}">{$lang->last_page}</a></li>
+  </div>
+</div>
+<!--@end-->
+
+<!--@end-->
+
+<include target="_footer.html" />

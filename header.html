@@ -1,0 +1,63 @@
+<!--@if(!$_loaded)-->
+  {@ $_loaded = true; }
+
+  {Context::addMetaTag("viewport", "width=device-width, user-scalable=yes")}
+
+  <block cond="$module_info->colorset == ''">
+    <load target="style/neverest.css" />
+  </block>
+
+  <block cond="$module_info->colorset == 'purple'">
+    <load target="style/theme/neverest-purple.css" />
+  </block>
+
+  <block cond="$module_info->colorset == 'green'">
+    <load target="style/theme/neverest-green.css" />
+  </block>
+
+  <block cond="$module_info->colorset == 'red'">
+    <load target="style/theme/neverest-red.css" />
+  </block>
+
+  <block cond="$module_info->colorset == 'yellow'">
+    <load target="style/theme/neverest-yellow.css" />
+  </block>
+
+  <load target="style/ionicons.min.css" />
+  
+  <div class="nr background-color-content border-line-bottom">
+    <div class="nr container padding-top-medium margin-bottom-small">
+      <form action="{getUrl()}" method="post" id="fo_is" no-error-return-url="true" >
+        <input type="hidden" name="mid" value="{$mid}" />
+        <input type="hidden" name="act" value="IS" />
+        <input type="hidden" name="where" value="{$where}" />
+        <input type="hidden" name="search_target" value="title_content" />
+
+        <div class="nr flex">
+          <input class="nr input input-default" name="is_keyword" type="text" required value="{$is_keyword}"/>
+          <input class="nr button button-primary" type="submit" value="{$lang->cmd_search}" />
+        </div>
+      </form>
+    </div>
+
+    <div class="nr tab-wrap overflow-hidden@m">
+      <ul class="nr tab">
+        <li <!--@if(!$where)-->id="tab-active" class="active"<!--@end-->><a href="{getAutoEncodedUrl('where','','page','','division','')}">{$lang->integration_search}</a></li>
+        <li <!--@if($where=='document')-->id="tab-active" class="active"<!--@end-->><a href="{getAutoEncodedUrl('where','document','page',1,'division','')}">{$lang->document}</a></li>
+        <li <!--@if($where=='comment')-->id="tab-active" class="active"<!--@end-->><a href="{getAutoEncodedUrl('where','comment','page',1,'division','')}">{$lang->comment}</a></li>
+        <li <!--@if($where=='trackback')-->id="tab-active" class="active"<!--@end-->><a href="{getAutoEncodedUrl('where','trackback','page',1,'division','')}">{$lang->trackback}</a></li>
+        <li <!--@if($where=='multimedia')-->id="tab-active" class="active"<!--@end-->><a href="{getAutoEncodedUrl('where','multimedia','page',1,'division','')}">{$lang->multimedia}</a></li>
+        <li <!--@if($where=='file')-->id="tab-active" class="active"<!--@end-->><a href="{getAutoEncodedUrl('where','file','page',1,'division','')}">{$lang->file}</a></li>
+      </ul>
+    </div>
+
+    <script>
+      jQuery(function($){
+        $(".nr.tab").animate({
+          scrollLeft: $("#tab-active").position().left - 15
+        }, 400);
+      });
+    </script>
+
+  </div>
+<!--@end-->

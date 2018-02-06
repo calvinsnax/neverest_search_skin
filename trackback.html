@@ -1,0 +1,51 @@
+<include target="header.html" />
+<include target="_header.html" />
+
+<div class="nr flex margin-bottom-small">
+  <div class="nr margin-right-small">
+    <h3 class="nr margin-remove"><i class="ion-android-attach" style="font-size: 24px;" aria-hidden="true"></i> {$lang->trackback} <span>({number_format($output->total_count)})</span></h3>
+  </div>
+
+  <div class="nr inline-flex flex-left flex-middle">
+    <ul class="nr subnav">
+      <!--@foreach($lang->is_search_option['trackback'] as $key => $val)-->
+      <li value="{$key}" class="<!--@if($search_target == $key)-->active<!--@end-->"><a href="{getUrl('where','trackback','search_target',$key,'page',1)}">{$val}</a></li>
+      <!--@end-->
+    </ul>
+  </div>
+</div>
+
+<!--@if(!count($output->data))-->
+<p class="nr text-small text-muted margin-top-small margin-bottom-remove">{$lang->msg_no_result}</p>
+
+<!--@else-->
+
+<ul class="nr list">
+  <!--@foreach($output->data as $no => $trackback)-->
+  <li>
+    <a href="{getUrl('','document_srl',$trackback->document_srl)}" target="_blank">{htmlspecialchars($trackback->title, ENT_COMPAT | ENT_HTML401, 'UTF-8', false)}</a>
+    <p class="nr text-small">{cut_str(htmlspecialchars($trackback->excerpt, ENT_COMPAT | ENT_HTML401, 'UTF-8', false))}</p>
+    <p class="nr text-xsmall text-muted"><a href="{$trackback->url}">{htmlspecialchars($trackback->blog_name, ENT_COMPAT | ENT_HTML401, 'UTF-8', false)}</a> · {zdate($trackback->regdate, "Y-m-d H:i")}</p>
+  </li>
+  <!--@end-->
+</ul>
+
+<!--@if($where == 'trackback' && $output->page_navigation)-->
+<div class="nr flex flex-center">
+  <ul class="nr pagination">
+    <li><a href="{getUrl('page','')}">{$lang->first_page}</a></li>
+    <!--@while($page_no = $output->page_navigation->getNextPage())-->
+      <!--@if($page == $page_no)-->
+      <li class="active"><a href="#">{$page_no}</a></li>
+      <!--@else-->
+      <li><a href="{getUrl('page',$page_no)}">{$page_no}</a></li>
+      <!--@end-->
+    <!--@end-->
+    <li><a href="{getUrl('page',$output->page_navigation->last_page)}">{$lang->last_page}</a></li>
+  </ul>
+</div>
+<!--@end-->
+
+<!--@end-->
+
+<include target="_footer.html" />

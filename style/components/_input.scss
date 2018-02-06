@@ -1,0 +1,58 @@
+
+/* ========================================================================
+ Component: Input
+ ========================================================================== */
+
+.nr.input {
+  display: inline-block;
+  width: 100%;
+  max-width: 450px;
+  padding: 12px 18px;
+  margin-right: $padding-xsmall;
+
+  font-size: $global-font-size-small;
+  font-weight: 500;
+  line-height: 1.5;
+
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color-base-lighter;
+
+  -webkit-transition: all 0.2s;
+     -moz-transition: all 0.2s;
+       -o-transition: all 0.2s;
+          transition: all 0.2s;
+  &:disabled {
+    cursor: no-drop;
+    opacity: 0.7;
+    background-color: $color-base-lightest;
+  }
+  @media (min-width: $breakpoint-medium) {
+    
+  };
+}
+
+.nr.input-default {
+  border-color: $color-base-lighter;
+  &:hover {
+    border-color: $color-base-light;
+  }
+  &:focus {
+    border-color: $color-primary;
+    outline: none;
+  }
+}
+
+/* Placeholder
+========================================================================== */
+
+.nr.input:-ms-input-placeholder {
+  color: $color-base !important;
+}
+.nr.input::-moz-placeholder {
+  color: $color-base;
+}
+.nr.input::-webkit-input-placeholder {
+  color: $color-base;
+}

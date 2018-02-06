@@ -1,0 +1,97 @@
+
+// ========================================================================
+// Component: Variables
+// ========================================================================
+
+// Breakpoint
+// =======================================================================
+
+$breakpoint-small: 640px !default;
+$breakpoint-medium: 960px !default;
+$breakpoint-large: 1200px !default;
+$breakpoint-xlarge: 1600px !default;
+
+$breakpoint-xsmall-max: ($breakpoint-small - 1) !default;
+$breakpoint-small-max: ($breakpoint-medium - 1) !default;
+$breakpoint-medium-max: ($breakpoint-large - 1) !default;
+$breakpoint-large-max: ($breakpoint-xlarge - 1) !default;
+
+// 
+// Color
+// 
+
+$color-content: white !default;
+
+$color-base: #999 !default;
+$color-base-dark: darken($color-base, 20%) !default;
+$color-base-darker: darken($color-base, 40%) !default;
+$color-base-darkest: darken($color-base, 50%) !default;
+$color-base-light: lighten($color-base, 20%) !default;
+$color-base-lighter: lighten($color-base, 33%) !default;
+$color-base-lightest: lighten($color-base, 37.4%) !default;
+
+$color-primary: #3493ff !default;
+$color-primary-dark: mix(darken($color-primary, 5%), black, 90%) !default;
+$color-primary-darker: mix(darken($color-primary, 5%), black, 80%) !default;
+$color-primary-light: mix($color-primary, white, 80%) !default;
+$color-primary-lighter: mix($color-primary, white, 20%) !default;
+
+$color-link: #4d82ff !default;
+$color-visited: #b071ff !default;
+
+// Inverse opacity
+$inverse-opacity-great-lightest: rgba($color-content, 0.8) !default;
+$inverse-opacity-lightest: rgba($color-content, 0.6) !default;
+$inverse-opacity-lighter: rgba($color-content, 0.4) !default;
+$inverse-opacity-light: rgba($color-content, 0.2) !default;
+$inverse-opacity-dark: rgba($color-content, 0.1) !default;
+
+
+// 
+// Typography
+// 
+
+// Global
+$global-font-family: 'Noto Sans Korean', 'Open Sans', "malgun gothic", "Nanum Gothic", dotum, arial, sans-serif;
+$global-font-size: 16px !default;
+$global-line-height: 1.5 !default;      // 24px
+
+$global-font-size-xxlarge: 42px !default; // 42px
+$global-font-size-xlarge: 32px !default;     // 32px
+$global-font-size-large: 24px !default;   // 24px
+$global-font-size-medium: 20px !default;  // 20px
+$global-font-size-small: 14px !default; // 14px
+$global-font-size-xsmall: 12px !default; // 12px
+
+//base
+$base-line-height-large: 1.2 !default;
+$base-line-height-xlarge: 1.3 !default;
+$base-line-height-xxlarge: 1.4 !default;
+
+
+// 
+// Padding
+// 
+
+$padding-xsmall: 10px !default;
+$padding-small: 15px !default;
+$padding-default: 30px !default;
+$padding-medium: 50px !default;
+$padding-large: 100px !default;
+$padding-xlarge: 140px !default;
+
+
+// 
+// Box-shadow
+// 
+
+$box-shadow-small: 0 3px 4px rgba($color-base-darkest, 0.1) !default;
+$box-shadow-default: 0 2px 8px -3px rgba($color-base-darkest, 0.2) !default;
+$box-shadow-medium: 0 5px 8px rgba($color-base-darkest, 0.1) !default;
+
+
+// 
+// border-rounded
+// 
+
+$border-rounded-border-radius: 3px !default;

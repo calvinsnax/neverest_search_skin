@@ -1,0 +1,51 @@
+
+/* ========================================================================
+ Component: Section
+ ========================================================================== */
+
+.nr.section {
+  zoom: 1;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+.nr.section-large {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.section-right-image {
+  position: absolute;
+  right: -7%;
+  bottom: 0;
+  @media (max-width: $breakpoint-large-max) {
+    right: -24%;
+  }
+  @media (max-width: $breakpoint-medium-max) {
+    right: -40%;
+  }
+  @media (max-width: $breakpoint-small-max) {
+    right: -100%;
+  }
+}
+
+.section-left-image {
+  position: absolute;
+  left: -7%;
+  @media (max-width: $breakpoint-large-max) {
+    left: -28%;
+  }
+  @media (max-width: $breakpoint-medium-max) {
+    left: -48%;
+  }
+  @media (max-width: $breakpoint-small-max) {
+    left: -100%;
+  }
+}

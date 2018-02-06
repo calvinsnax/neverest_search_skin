@@ -1,0 +1,31 @@
+
+/* ========================================================================
+ Component: Utilities
+ ========================================================================== */
+
+/* Border Line
+ ========================================================================== */
+
+.nr.border-line {
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color-base-lighter;
+}
+
+.nr.border-line-right {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: $color-base-lighter;
+}
+
+.nr.border-line-top {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: $color-base-lighter;
+}
+
+.nr.border-line-bottom {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $color-base-lighter;
+}

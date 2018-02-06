@@ -1,0 +1,39 @@
+
+/* ========================================================================
+ Component: Sub Navigation
+ ========================================================================== */
+
+.nr.subnav {
+  position: relative;
+  top: 1px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  li {
+    display: inline-block;
+    position: relative;
+    a {
+      display: inline-block;
+      padding: 0;
+      margin-right: 20px;
+
+      color: $color-base;
+      font-size: 0.874rem;
+      font-weight: 500;
+      line-height: 1;
+      text-decoration: none;
+
+      -webkit-transition: all 150ms;
+         -moz-transition: all 150ms;
+           -o-transition: all 150ms;
+              transition: all 150ms;
+    }
+    &:hover > a {
+      color: $color-base-dark;
+    }
+    &.active > a {
+      color: $color-base-darker;
+      font-weight: bold;
+    }
+  }
+}

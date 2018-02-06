@@ -1,0 +1,83 @@
+
+/* ========================================================================
+ Component: Tab
+ ========================================================================== */
+
+.nr.tab {
+  position: relative;
+  top: 1px;
+  margin: 0;
+  padding: 0;
+  height: 70px;
+
+  white-space: nowrap;
+  list-style-type: none;
+
+  overflow-y: hidden;
+
+  max-width: $breakpoint-large;
+  width: 100%;
+  box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+
+  @media (max-width: $breakpoint-small-max) {
+    width: 100%;
+  };
+  @media (min-width: $breakpoint-medium) {
+    max-width: $breakpoint-large;
+    padding-left: 30px;
+    padding-right: 30px;
+  };
+}
+
+.nr.tab li {
+  display: inline-block;
+  position: relative;
+  & > a {
+    display: inline-block;
+    color: $color-base;
+  
+    font-size: 0.874rem;
+    font-weight: 500;
+    line-height: 58px;
+    padding: 0;
+    margin-right: 20px;
+  
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    border-bottom: 2px solid transparent;
+  
+    -webkit-transition: all 150ms;
+       -moz-transition: all 150ms;
+         -o-transition: all 150ms;
+            transition: all 150ms;
+  }
+  &:last-child > a {
+    margin-right: 0;
+  }
+  &:hover > a {
+    color: $color-base-dark;
+  }
+  
+  &.active > a {
+    color: $color-primary;
+    border-bottom: 2px solid $color-primary;
+  }
+  
+  &:hover > .popover-animationLeft {
+    visibility: visible;
+    opacity: 1;
+  
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.nr.tab-wrap {
+  height: 61px;
+  overflow: hidden;
+}

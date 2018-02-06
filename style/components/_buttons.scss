@@ -1,0 +1,67 @@
+
+/* ========================================================================
+ Component: Button
+ ========================================================================== */
+
+.nr.button {
+  display: inline-block;
+  cursor: pointer;
+  font-size: $global-font-size-small;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  
+  padding: 12px 18px;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color-base-lighter;
+
+  text-decoration: none !important;
+
+  -webkit-transition: all 0.2s;
+     -moz-transition: all 0.2s;
+       -o-transition: all 0.2s;
+          transition: all 0.2s;
+  &:focus {
+    outline: none;
+  }
+}
+
+.nr.button-rounded {
+  border-radius: 100px !important;
+}
+
+
+/* Button color style
+ ========================================================================== */
+
+.nr.button-default {
+  color: $color-base-dark;
+  background-color: $color-content;
+  border-color: $color-base-lighter;
+  &:hover {
+    color: $color-base-dark;
+    border-color: $color-base-light;
+  }
+  &:active {
+    color: $color-base-dark;
+    border-color: $color-base;
+  }
+}
+
+.nr.button-primary {
+  color: $color-content !important;
+  border-color: $color-primary !important;
+  background-color: $color-primary !important;
+  &:hover {
+    color: $color-content !important;
+    border-color: $color-primary-light !important;
+    background-color: $color-primary-light !important;
+  }
+  &:active {
+    color: $color-content !important;
+    border-color: $color-primary-dark !important;
+    background-color: $color-primary-dark !important;
+  }
+}

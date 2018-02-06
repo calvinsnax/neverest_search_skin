@@ -1,0 +1,92 @@
+
+/* ========================================================================
+ Component: Text
+ ========================================================================== */
+
+.nr.text-light {
+  font-weight: 300;
+}
+
+.nr.text-normal {
+  font-weight: normal;
+}
+
+.nr.text-bold {
+  font-weight: bold;
+}
+
+.nr.text-word-break-keep-all {
+  word-break: keep-all;
+}
+
+/* Text Align
+ ========================================================================== */
+
+.nr.text-left {
+  text-align: left;
+  &\@s {
+    @media (max-width: $breakpoint-xsmall-max) {
+      text-align: left !important;
+    }
+  }
+  &\@m {
+    @media (max-width: $breakpoint-small-max) {
+      text-align: left !important;
+    }
+  }
+}
+
+.nr.text-center {
+  text-align: center;
+  &\@s {
+    @media (max-width: $breakpoint-xsmall-max) {
+      text-align: center !important;
+    }
+  }
+  &\@m {
+    @media (max-width: $breakpoint-small-max) {
+      text-align: center !important;
+    }
+  }
+}
+
+
+
+.nr.text-right {
+  text-align: right;
+  &\@s {
+    @media (max-width: $breakpoint-small-max) {
+      text-align: right !important;
+    }
+  }
+  &\@m {
+    @media (max-width: $breakpoint-small-max) {
+      text-align: right !important;
+    }
+  }
+}
+
+/* font Size
+ ========================================================================== */
+
+.nr.text-xsmall {
+  font-size: $global-font-size-xsmall !important; // 12px
+}
+.nr.text-small {
+  font-size: $global-font-size-small !important; // 14px
+}
+
+/* Text Color
+ ========================================================================== */
+
+.nr.text-default {
+  color: $color-base-darker !important;
+}
+
+.nr.text-primary {
+  color: $color-primary !important;
+}
+
+.nr.text-muted {
+  color: $color-base !important;
+}
